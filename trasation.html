@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khan Bank Mobile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Page d'accueil -->
+    <div class="page home-page" id="homePage">
+        <header class="top-header">
+            <div class="user-info">
+                <div class="profile-icon"><i class="fas fa-user"></i></div>
+                <div class="user-greeting">
+                    <p>Hello</p>
+                    <h2>ENKHSAIKHAN. J</h2>
+                </div>
+            </div>
+            <div class="header-icons">
+                <div class="icon-circle"><i class="fas fa-bell"></i></div>
+                <div class="icon-circle"><i class="fas fa-eye"></i></div>
+            </div>
+        </header>
+
+        <div class="account-card">
+            <div class="account-header">
+                <div class="star-icon"><i class="fas fa-star"></i></div>
+                <div class="account-number">MN50 0005 00 5018191771</div>
+                <div class="copy-icon"><i class="far fa-copy"></i></div>
+            </div>
+            <div class="account-balance">
+                <div class="balance">29,125.96</div>
+                <div class="currency">MNT</div>
+            </div>
+            <div class="account-actions">
+                <button class="action-button">Statement</button>
+                <button class="action-button">My Finances</button>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <div class="action-item">
+                <div class="action-icon"><i class="fas fa-piggy-bank"></i></div>
+                <p>Account</p>
+            </div>
+            <div class="action-item">
+                <div class="action-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <p>Loan</p>
+            </div>
+            <div class="action-item">
+                <div class="action-icon"><i class="far fa-credit-card"></i></div>
+                <p>Card</p>
+            </div>
+            <div class="action-item">
+                <div class="action-icon"><i class="fas fa-tv"></i></div>
+                <p>Payment</p>
+            </div>
+        </div>
+
+        <div class="transactions-section">
+            <h3>Recent Transactions</h3>
+            <div class="account-selector">
+                <p>MN50 0005 00 5018191771</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="transaction-list">
+                <!-- Les transactions seront générées dynamiquement par JavaScript -->
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <div class="nav-item active">
+                <i class="fas fa-home"></i>
+                <p>Home</p>
+            </div>
+            <div class="nav-item">
+                <div class="qpay-circle">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <p>QPay</p>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-exchange-alt"></i>
+                <p>Transfer</p>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Page de transaction -->
+    <div class="page transaction-page" id="transactionPage">
+        <header class="transaction-header">
+            <div class="back-button"><i class="fas fa-arrow-left"></i></div>
+            <h2>Transaction within Khan Bank</h2>
+        </header>
+
+        <div class="transfer-section">
+            <p class="section-label">Transfer account</p>
+            <div class="account-select">
+                <div class="account-info">
+                    <p>Current/ Individual/...</p>
+                    <p class="account-number">MN50 0005 00 5018191771</p>
+                </div>
+                <div class="balance">29,125.96 ₮</div>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="amount-input">
+                <div class="currency-badge">MNT</div>
+                <div class="amount">0.00</div>
+            </div>
+
+            <div class="payment-method">
+                <div class="digi-pay">
+                    <img src="/api/placeholder/120/40" alt="DiGi Pay">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="recipient-section">
+                <div class="input-field">
+                    <label>Recipient account</label>
+                    <input type="text" placeholder="Enter account number" aria-label="Recipient account">
+                </div>
+                <div class="input-field">
+                    <label>Recipient name</label>
+                    <input type="text" placeholder="Enter recipient name" aria-label="Recipient name">
+                </div>
+                <div class="input-field">
+                    <label>Description</label>
+                    <input type="text" placeholder="Enter transaction description" aria-label="Description">
+                </div>
+            </div>
+
+            <div class="transaction-tags">
+                <div class="tag add-tag"><i class="fas fa-plus"></i></div>
+                <div class="tag">Food</div>
+                <div class="tag">Purchase</div>
+                <div class="tag service-tag">Service payment</div>
+                <div class="tag from-tag">from ENKHSAIKHAN</div>
+            </div>
+
+            
+            <button class="continue-button">Continue</button>
+        </div>
+    </div>
+
+    <!-- Page de confirmation -->
+    <div class="page confirmation-page" id="confirmationPage">
+        <header class="search-header">
+            <div class="search-bar">
+                <i class="fas fa-list"></i>
+                <div class="search-input">recu</div>
+                <div class="dropdown-indicator"><i class="fas fa-chevron-down"></i></div>
+                <div class="search-button">OK</div>
+            </div>
+        </header>
+
+        <div class="confirmation-container">
+            <div class="success-card">
+                <div class="success-circle">
+                    <i class="fas fa-check"></i>
+                </div>
+                <p class="success-message">Гүйлгээ амжилттай.</p>
+                <h1 class="success-amount">0.00 MNT</h1>
+                <p class="transaction-date-time">2025/04/28 17:28</p>
+            </div>
+
+            <div class="transaction-details-card">
+                <div class="detail-row">
+                    <div class="detail-label">Дансны үлдэгдэл</div>
+                    <div class="detail-value">600,000,000,00.96 ₮ <i class="fas fa-eye"></i></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Хүлээн авагч</div>
+                    <div class="detail-value">Recipient... <span class="currency-badge small">₮</span></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">5018191771</div>
+                    <div class="detail-value"></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Гүйлгээний утга</div>
+                    <div class="detail-value">Transfer</div>
+                </div>
+            </div>
+
+            <div class="confirmation-actions">
+                <button class="button-save-template">Загвар хадгалах</button>
+                <button class="button-finish">Дуусгах</button>
+            </div>
+        </div>
+
+        <footer class="share-footer">
+            <div class="share-button"><i class="fas fa-share-alt"></i></div>
+        </footer>
+    </div>
+
+    <!-- Page QPay (page supplémentaire) -->
+    <div class="page qpay-page" id="qpayPage">
+        <header class="transaction-header">
+            <div class="back-button"><i class="fas fa-arrow-left"></i></div>
+            <h2>QPay</h2>
+        </header>
+
+        <div class="qpay-container" style="text-align: center; padding: 20px;">
+            <div class="qr-display">
+                <img src="/api/placeholder/300/300" alt="QR Code" class="qr-code">
+                <p>Scan this code to pay</p>
+                <p style="margin-top: 20px; color: #008942;">Cliquez sur le code QR pour simuler un paiement</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript amélioré -->
+    <script src="script.js"></script>
+</body>
+</html>
